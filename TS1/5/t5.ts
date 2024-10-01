@@ -11,11 +11,11 @@ function lengthOrSquare(value: string | number): number {
 }
 
 // Prompt the user to enter a value as either a string or a number
-const userInput2 = prompt('Enter a value as either a string or a number');
+const userInput2 = prompt('Enter a value as either a string or a number') || '';
 /* TODO: If userInput is numeric, convert it to number else keep it as string */
 const parsedValue: number | string = !isNaN(Number(userInput2))
     ? Number(userInput2)
-    : userInput2!;
+    : userInput2;
 
 // Call the lengthOrSquare function
 const result2 = lengthOrSquare(parsedValue);
