@@ -16,7 +16,9 @@ interface Book {
 type Product = ElectronicDevice | Book;
 
 // Implement instances of the 'Product' type
-function createElectronicDevice(brand: string | null, model: string | null): ElectronicDevice {
+function createElectronicDevice(): ElectronicDevice {
+    const brand = prompt('Enter brand:') || "";
+    const model = prompt('Enter model:') || "";
     return {
         type: 'electronic',
         brand: brand,
@@ -24,7 +26,9 @@ function createElectronicDevice(brand: string | null, model: string | null): Ele
     };
 }
 
-function createBook(name: string | null, author: string | null): Book {
+function createBook(): Book {
+    const name = prompt('Enter name:') || "";
+    const author = prompt('Enter author:') || "";
     return {
         type: 'book',
         name: name,
@@ -33,8 +37,8 @@ function createBook(name: string | null, author: string | null): Book {
 }
 
 // Create instances of 'Product'
-const electronicProduct = createElectronicDevice('Sony', 'X123');
-const bookProduct = createBook('The Great Gatsby', 'F. Scott Fitzgerald');
+const electronicProduct = createElectronicDevice();
+const bookProduct = createBook();
 
 // Display the details of each product
 function displayProductDetails(product: Product) {

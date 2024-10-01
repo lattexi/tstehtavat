@@ -1,13 +1,17 @@
 ;
 // Implement instances of the 'Product' type
-function createElectronicDevice(brand, model) {
+function createElectronicDevice() {
+    const brand = prompt('Enter brand:') || "";
+    const model = prompt('Enter model:') || "";
     return {
         type: 'electronic',
         brand: brand,
         model: model
     };
 }
-function createBook(name, author) {
+function createBook() {
+    const name = prompt('Enter name:') || "";
+    const author = prompt('Enter author:') || "";
     return {
         type: 'book',
         name: name,
@@ -15,8 +19,8 @@ function createBook(name, author) {
     };
 }
 // Create instances of 'Product'
-const electronicProduct = createElectronicDevice('Sony', 'X123');
-const bookProduct = createBook('The Great Gatsby', 'F. Scott Fitzgerald');
+const electronicProduct = createElectronicDevice();
+const bookProduct = createBook();
 // Display the details of each product
 function displayProductDetails(product) {
     if (product.type === 'electronic') {
