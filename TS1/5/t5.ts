@@ -19,5 +19,5 @@ const parsedValue: number | string = !isNaN(Number(userInput2))
 
 // Call the lengthOrSquare function
 const result2 = lengthOrSquare(parsedValue);
-console.log(typeof parsedValue);
+console.log(typeof result2);
 console.log(result2);
