@@ -13,7 +13,7 @@ const restaurantRow = (restaurant: Restaurant): HTMLTableRowElement => {
   return tr;
 };
 
-const restaurantModal = (restaurant: Restaurant, menu: Menu): string => {
+const restaurantModal = (restaurant: Restaurant, menu: Menu) => {
   const { name, address, city, postalCode, phone, company } = restaurant;
   let html = `<h3>${name}</h3>
     <p>${company}</p>

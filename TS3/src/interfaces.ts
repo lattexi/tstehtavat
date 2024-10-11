@@ -1,4 +1,5 @@
 interface Restaurant {
+    _id: string;
     name: string;
     address: string;
     city: string;
@@ -9,3 +10,13 @@ interface Restaurant {
         coordinates: [number, number];
     };
 }
+
+interface Course {
+    name: string;
+    diets: string;
+    price: number;
+}
+
+interface Menu {
+    courses: Course[]
+};

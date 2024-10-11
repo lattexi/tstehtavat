@@ -7,4 +7,4 @@ const fetchData = async (url: string, options = {}) => {
   return json;
 };
 
-export {fetchData};
+export { fetchData };

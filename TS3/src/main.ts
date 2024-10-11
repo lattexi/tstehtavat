@@ -1,6 +1,6 @@
-import { errorModal, restaurantModal, restaurantRow } from './components';
-import { fetchData } from './functions';
-import { apiUrl, positionOptions } from './variables';
+import { errorModal, restaurantModal, restaurantRow } from './components.js';
+import { fetchData } from './functions.js';
+import { apiUrl, positionOptions } from './variables.js';
 
 const modal = document.querySelector('dialog');
 if (!modal) {
@@ -14,7 +14,7 @@ const calculateDistance = (x1: number, y1: number, x2: number, y2: number): numb
   Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 
 
-const createTable = (restaurants: Restaurant[]): void => {
+const createTable = (restaurants: Restaurant[]) => {
   const table = document.querySelector('table');
   if (!table) {
     throw new Error('Table not found');
@@ -53,12 +53,7 @@ const createTable = (restaurants: Restaurant[]): void => {
   });
 };
 
-interface Error {
-  code: number;
-  message: string;
-}
-
-const error = (err: Error) => {
+const error = (err: GeolocationPositionError) => {
   console.warn(`ERROR(${err.code}): ${err.message}`);
 };
 

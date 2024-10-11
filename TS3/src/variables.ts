@@ -1,4 +1,4 @@
-const apiUrl = 'https://sodexo-webscrape-r73sdlmfxa-lz.a.run.app/api/v1';
+const apiUrl = 'https://media1.edu.metropolia.fi/restaurant/api/v1';
 
 const positionOptions = {
   enableHighAccuracy: true,
@@ -6,4 +6,4 @@ const positionOptions = {
   maximumAge: 0,
 };
 
-export {apiUrl, positionOptions};
+export { apiUrl, positionOptions };
